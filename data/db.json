@@ -1,19 +1,6 @@
 {
   "client": [
     {
-      "id": "01",
-      "nom": "abdelilah",
-      "prenom": "Ait",
-      "email": "abdelilahAit@gmail.com",
-      "GSM1": "053356",
-      "GSM2": "205565",
-      "CIN": "P21545",
-      "Typology": "SecteurPrive",
-      "Reference": "2121215",
-      "Ncompte": "66546489454242424",
-      "objet": "Fraud"
-    },
-    {
       "id": "07",
       "nom": "abd",
       "prenom": "At",
@@ -25,19 +12,6 @@
       "Reference": "2121215",
       "Ncompte": "6654515151515156489454242424",
       "objet": "cooooco"
-    },
-    {
-      "nom": "azaza",
-      "prenom": "azaz",
-      "email": "abb@gmail.com",
-      "GSM1": "32323",
-      "GSM2": "2323232",
-      "CIN": "123232",
-      "Typology": "",
-      "Reference": "323232",
-      "Ncompte": "21313131",
-      "objet": "aaaaaaaaaaaaaaaaaa",
-      "id": "PUDQy81"
     }
   ]
 }

@@ -1,8 +1,6 @@
 import  React from 'react'
 
-
-
-export default  function Layout({children}) {
+export  function Layout({children}) {
     return(
     <div>
         {children}
@@ -10,3 +8,4 @@ export default  function Layout({children}) {
 
     )
 }
+

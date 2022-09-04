@@ -20,14 +20,8 @@ import useFetch from "./useFetch";
 
 
 
-import Stack from '@mui/material/Stack';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
 
 
-const Alert = React.forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
 
 
 
@@ -163,6 +157,7 @@ const handleClose = (event, reason) => {
 
   return (
     <div className="create">
+
       <Typography mt={2} variant="h1" component="h2">
         Claims form
       </Typography>

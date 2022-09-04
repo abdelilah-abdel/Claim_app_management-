@@ -5,7 +5,7 @@ import FooterBlogs from './components/footerBlogs';
 import Chatbot from './components/chatbot';
 import CIHform from "./components/CIHform";
 import History from "./components/History";
-import Layout from "./components/Layout"
+import { Counter }  from "./features/counter/Counter"
 
 
 import {BrowserRouter as Router ,Route , Switch } from 'react-router-dom'
@@ -21,12 +21,16 @@ function App() {
 
         <div className="content">
 
-    <Router>
-        {/*<Layout>*/}
-        <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
+
+
+
+      <Router>
+          <Switch>
+
+           <Route exact path="/">
+                <Home />
+           </Route>
+
 
             <Route exact path="/chatbot">
               <Chatbot />
@@ -39,8 +43,9 @@ function App() {
             <Route exact path="/history">
               <History />
             </Route>
+
           </Switch>
-        {/*</Layout>*/}
+
     </Router>
 </div>
 
