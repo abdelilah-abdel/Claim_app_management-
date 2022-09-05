@@ -10,7 +10,7 @@ import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
 export default function ClaimsCard({ claim, handleDelete }) {
     return (
                 <div>
-                    <Card elevation={10}>
+                    <Card elevation={20}>
                         <CardHeader
                             action={
                                 <IconButton onClick={() => handleDelete(claim.id)}>

@@ -1,17 +1,13 @@
-import logo from './logo.svg';
 import Navbar from './components/navbar';
 import Home from './components/home';
-import FooterBlogs from './components/footerBlogs';
 import Chatbot from './components/chatbot';
 import CIHform from "./components/CIHform";
 import History from "./components/History";
-import { Counter }  from "./features/counter/Counter"
 
 
 import {BrowserRouter as Router ,Route , Switch } from 'react-router-dom'
 function App() {
   
-  const dynamic_vaiable = " welcome to CIH reclamation "; 
 
 
   return (
@@ -20,8 +16,6 @@ function App() {
         <Navbar />
 
         <div className="content">
-
-
 
 
       <Router>

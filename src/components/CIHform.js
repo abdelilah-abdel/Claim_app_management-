@@ -18,6 +18,9 @@ import { useHistory } from 'react-router-dom';
 import useFetch from "./useFetch";
 
 
+import validator from 'validator';
+
+
 
 
 
@@ -45,8 +48,9 @@ function CIHform() {
     console.log("hello", e);
   };
 
+
   const history = useHistory();
-   const [nom, setNom] = useState("");
+  const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [email, setEmail] = useState("");
   const [GSM1, setGSM1] = useState("");
@@ -56,7 +60,7 @@ function CIHform() {
   const [Reference, setReference] = useState("");
   const [Ncompte, setNcompte] = useState("");
   const [objet, setObjet] = useState("");
-  let [Typologie, setTypologie] = useState("");
+  let   [Typologie, setTypologie] = useState("");
 
 
   const [NomError, setNomError] = useState(false);
@@ -114,8 +118,8 @@ function CIHform() {
           Ncompte,
           objet,
         }),
-      }).then(() => history.push("/hisroy"));
-      console.log("fitched ")
+      }).then(() => history.push("/history"));
+
 
     }
   };
@@ -142,6 +146,13 @@ function CIHform() {
 
   ]
 
+
+
+
+
+
+
+
 const  handleChange = (e) => {
     console.log("typologieee ");
     setTypologie(e.target.value);
@@ -154,6 +165,18 @@ const handleClose = (event, reason) => {
         }
 
   }
+
+    const [errorMessage, setErrorMessage] = useState('')
+
+    const validate = (textInput) => {
+
+        if (validator.isPassportNumber(textInput,'IN')) {
+            setErrorMessage('Is Valid Passport Number')
+        } else {
+            setErrorMessage('Is Invalid Passport Number')
+        }
+    }
+
 
   return (
     <div className="create">
@@ -191,9 +214,11 @@ const handleClose = (event, reason) => {
           value={CIN}
           variant="outlined"
           color="secondary"
-          type="number"
+          type="text"
           required
-          onChange={(e) => setCIN(e.target.value)}
+          onClick ={(e) => validate(e.target.value)}
+          onChange={ (e) => setCIN(e.target.value)}
+
         />
 
         <label>Email :</label>
@@ -225,14 +250,6 @@ const handleClose = (event, reason) => {
           color="secondary"
           type="number"
           onChange={(e) => setGSM2(e.target.value)}
-        />
-
-        <label>GSM secondaire :</label>
-        <input
-          value={GSM2}
-          variant="outlined"
-          color="secondary"
-           onChange={(e) => setGSM2(e.target.value)}
         />
 
 
