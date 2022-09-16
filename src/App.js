@@ -1,52 +1,61 @@
-import Navbar from './components/navbar';
 import Home from './components/home';
 import Chatbot from './components/chatbot';
 import CIHform from "./components/CIHform";
 import History from "./components/History";
-
+import  Header from  "./components/Header";
 
 import {BrowserRouter as Router ,Route , Switch } from 'react-router-dom'
-function App() {
-  
+import * as React from "react";
+import Navbar from "./components/navbar";
+
+
+
+
+
+ function App() {
+
 
 
   return (
     <Router>
-      <div className="App">
-        <Navbar />
+        <Navbar/>
+        <div className="App">
 
-        <div className="content">
+
+            <div className="content">
+
 
 
       <Router>
           <Switch>
 
-           <Route exact path="/">
+           <Route exact path="/" element={<Home/>}>
                 <Home />
            </Route>
 
 
-            <Route exact path="/chatbot">
+            <Route exact  path="/chatbot" element={<Chatbot />}>
               <Chatbot />
             </Route>
 
-            <Route exact path="/form">
+            <Route  exact  path="/form"  element={<CIHform />}>
               <CIHform />
             </Route>
 
-            <Route exact path="/history">
+            <Route exact  path="/history" element={<History/>} >
               <History />
             </Route>
-
-          </Switch>
+           </Switch>
 
     </Router>
-</div>
+
+        </div>
 
         {/*}   <footer className="content">
           <FooterBlogs />
         </footer> */}
       </div>
+
     </Router>
   );
 }

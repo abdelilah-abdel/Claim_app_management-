@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import useFetch from "./useFetch";
-import Sidebar from  "./Sidebar"
+import useFetch from  "./useFetch"
+
 
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 
 import ClaimsCard from "./claimsCard";
-import Content from "./Content";
-import Navigator from "./Navigator";
-import Paperbase from "./Paperbase";
+ import Navigator from "./Navigator";
 
 
 
-function History( ) {
+
+function  DataCard(){
 
     const { error, isPending, data: client } = useFetch('http://localhost:8000/client')
     const [claims , setclaims] = useState([]);
@@ -37,32 +36,32 @@ function History( ) {
     }
 
 
-    return (
-
-
-        <div className="home">
 
 
 
-         <Paperbase />
-            <Container>
-                <Grid container spacing={3}>
+    return(
+        <Container>
+            <Grid container spacing={3}>
 
 
-                   <Navigator />
+                <Navigator />
+                {claims.map(claim => (
 
-                </Grid>
+                    <Grid item xs={12} md={6} lg={4} key={claim.id}>
 
-                
+                        <ClaimsCard claim={claim} handleDelete={handleDelete}/>
 
-            </Container>
-
-
-
+                        {/*   <DataGridDemo claim={claim} handleDelete={handleDelete} /> */}
 
 
-        </div>
-    );
+                    </Grid>
+                ))}
+            </Grid>
+
+        </Container>
+
+    )
 }
 
-export default History
+export  default  DataCard;
+

@@ -20,6 +20,10 @@ import useFetch from "./useFetch";
 
 import validator from 'validator';
 
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardContent from '@material-ui/core/CardContent'
+
 
 
 
@@ -179,155 +183,164 @@ const handleClose = (event, reason) => {
 
 
   return (
-    <div className="create">
-
-      <Typography mt={2} variant="h1" component="h2">
-        Claims form
-      </Typography>
-
-      <form  autoComplete="off" onSubmit={handleSubmit}>
-        <label>Nom:</label>
-
-        <input
-          value={nom}
-          variant="outlined"
-          color="secondary"
-          type="text"
-          required
-          error={NomError}
-          onChange={(e) => setNom(e.target.value)}
-        />
-
-        <label>prenom:</label>
-        <input
-          value={prenom}
-          variant="outlined"
-          color="secondary"
-          type="text"
-          required
-          error={PrenomError}
-          onChange={(e) => setPrenom(e.target.value)}
-        />
-
-        <label>CIN :</label>
-        <input
-          value={CIN}
-          variant="outlined"
-          color="secondary"
-          type="text"
-          required
-          onClick ={(e) => validate(e.target.value)}
-          onChange={ (e) => setCIN(e.target.value)}
-
-        />
-
-        <label>Email :</label>
-        <input
-          value={email}
-          variant="outlined"
-          color="secondary"
-          type="email"
-          required
-          error={EmailError}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <label>GSM principal :</label>
-        <input
-          value={GSM1}
-          variant="outlined"
-          color="secondary"
-          type="number"
-          required
-          error={GSMError}
-          onChange={(e) => setGSM1(e.target.value)}
-        />
-
-        <label>GSM secondaire :</label>
-        <input
-          value={GSM2}
-          variant="outlined"
-          color="secondary"
-          type="number"
-          onChange={(e) => setGSM2(e.target.value)}
-        />
+  <div className="create">
+    <Card elevation={5} variant="outlined" sx={{ maxWidth: 700 }}>
+        <cardHeader
+            Claims form
+            />
 
 
 
+        <CardContent>
+            <form  autoComplete="off" onSubmit={handleSubmit}>
+                <label>Nom:</label>
 
- <Typography mt={2} variant="h1" component="h2">
-Contenue de Reclamation
-</Typography>
+                <input
+                    value={nom}
+                    variant="outlined"
+                    color="secondary"
+                    type="text"
+                    required
+                    error={NomError}
+                    onChange={(e) => setNom(e.target.value)}
+                />
 
+                <label>prenom:</label>
+                <input
+                    value={prenom}
+                    variant="outlined"
+                    color="secondary"
+                    type="text"
+                    required
+                    error={PrenomError}
+                    onChange={(e) => setPrenom(e.target.value)}
+                />
 
-        <label>Typologie:</label>
-        <select  onChange= {(e) => setTypologie(e.target.value)} >
+                <label>CIN :</label>
+                <input
+                    value={CIN}
+                    variant="outlined"
+                    color="secondary"
+                    type="text"
+                    required
+                    onClick ={(e) => validate(e.target.value)}
+                    onChange={ (e) => setCIN(e.target.value)}
 
-          {Typologie.map((Typologie) => (
-              <option value={Typologie.value}>{Typologie.label}
-              </option>
+                />
 
-            ))}
-        </select>
+                <label>Email :</label>
+                <input
+                    value={email}
+                    variant="outlined"
+                    color="secondary"
+                    type="email"
+                    required
+                    error={EmailError}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
 
-        <label> Reference : </label>
-        <input
-            value={Reference}
-            variant="outlined"
-            color="secondary"
-            type="text"
-            onChange={(e) => setReference(e.target.value)}
-        />
+                <label>GSM principal :</label>
+                <input
+                    value={GSM1}
+                    variant="outlined"
+                    color="secondary"
+                    type="number"
+                    required
+                    error={GSMError}
+                    onChange={(e) => setGSM1(e.target.value)}
+                />
 
-
-        <label> Numero de compte : </label>
-        <input
-            value={Ncompte}
-            variant="outlined"
-            color="secondary"
-            type="text"
-            onChange={(e) => setNcompte(e.target.value)}
-        />
-
-
-        <label> l'objet de reclamation : </label>
-        <TextField
-          onChange={(e) => setObjet(e.target.value)}
-          label="Objet"
-          variant="outlined"
-          color="secondary"
-          multiline
-          rows={10}
-          fullWidth
-          required
-          value={objet}
-          error={ObjetError}
-        />
-
-        <Button component="label">
-          Telecharger des fichiers
-          <input hidden accept="image/*" multiple type="file" />
-        </Button>
-
-        <Button
-          variant="contained"
-          type="submit"
-          onClick={handleClick}
-          //startIcon={<IosShareOutlinedIcon />}
-          endIcon={<SendOutlinedIcon />}
-        >
-          Submit
-        </Button>
+                <label>GSM secondaire :</label>
+                <input
+                    value={GSM2}
+                    variant="outlined"
+                    color="secondary"
+                    type="number"
+                    onChange={(e) => setGSM2(e.target.value)}
+                />
 
 
 
 
-        <br/>
-        <br/>
-        <Button color="error" onClick={handleClick}>
-          Reset
-        </Button>
-      </form>
+                <Typography mt={2} variant="h1" component="h2">
+                    Contenue de Reclamation
+                </Typography>
+
+
+                <label>Typologie:</label>
+                <select  onChange= {(e) => setTypologie(e.target.value)} >
+
+                    {Typologie.map((Typologie) => (
+                        <option value={Typologie.value}>{Typologie.label}
+                        </option>
+
+                    ))}
+                </select>
+
+                <label> Reference : </label>
+                <input
+                    value={Reference}
+                    variant="outlined"
+                    color="secondary"
+                    type="text"
+                    onChange={(e) => setReference(e.target.value)}
+                />
+
+
+                <label> Numero de compte : </label>
+                <input
+                    value={Ncompte}
+                    variant="outlined"
+                    color="secondary"
+                    type="text"
+                    onChange={(e) => setNcompte(e.target.value)}
+                />
+
+
+                <label> l'objet de reclamation : </label>
+                <TextField
+                    onChange={(e) => setObjet(e.target.value)}
+                    label="Objet"
+                    variant="outlined"
+                    color="secondary"
+                    multiline
+                    rows={10}
+                    fullWidth
+                    required
+                    value={objet}
+                    error={ObjetError}
+                />
+
+                <Button component="label">
+                    Telecharger des fichiers
+                    <input hidden accept="image/*" multiple type="file" />
+                </Button>
+
+                <Button
+                    variant="contained"
+                    type="submit"
+                    onClick={handleClick}
+                    //startIcon={<IosShareOutlinedIcon />}
+                    endIcon={<SendOutlinedIcon />}
+                >
+                    Submit
+                </Button>
+
+
+
+
+                <br/>
+                <br/>
+                <Button color="error" onClick={handleClick}>
+                    Reset
+                </Button>
+            </form>
+
+        </CardContent>
+
+    </Card>
+
+
     </div>
   );
 
