@@ -7,7 +7,10 @@ import  Header from  "./components/Header";
 import {BrowserRouter as Router ,Route , Switch } from 'react-router-dom'
 import * as React from "react";
 import Navbar from "./components/navbar";
+import DataTable from  "./components/DataTable"
 
+
+ import Paper from "@mui/material/Paper";
 
 
 
@@ -16,8 +19,11 @@ import Navbar from "./components/navbar";
 
 
 
+
+
   return (
-    <Router>
+
+     <Router>
         <Navbar/>
         <div className="App">
 
@@ -45,6 +51,10 @@ import Navbar from "./components/navbar";
             <Route exact  path="/history" element={<History/>} >
               <History />
             </Route>
+
+              <Route  exact path="/DataTable" component={<DataTable />}>
+                  <DataTable />
+              </Route>
            </Switch>
 
     </Router>
@@ -56,7 +66,9 @@ import Navbar from "./components/navbar";
         </footer> */}
       </div>
 
-    </Router>
+        </Router>
+
+
   );
 }
 

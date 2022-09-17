@@ -8,6 +8,8 @@ import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import Toolbar from "@mui/material/Toolbar";
+import {ToggleButton} from "@mui/material";
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 
 const logo =
   "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Ffr%2Fthumb%2Fb%2Fb2%2FLogo_CIH.png%2F120px-Logo_CIH.png&f=1&nofb=1";
@@ -60,6 +62,9 @@ const Navbar = () => {
                     <IconButton>
                         <RefreshIcon color="inherit" sx={{ display: 'block' }} />
                     </IconButton>
+                    <ToggleButton value="center" aria-label="centered">
+                        <ModeNightIcon />
+                    </ToggleButton>
                 </a>
                 </Tooltip>
 

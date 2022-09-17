@@ -15,6 +15,9 @@ import DataCard from "./DataCard";
 
 import ListItemIcon from '@mui/material/ListItemIcon';
 import HomeIcon from '@mui/icons-material/Home';
+import {Button} from "@material-ui/core";
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import IconButton from "@mui/material/IconButton";
 
 
 function Copyright() {
@@ -28,9 +31,9 @@ function Copyright() {
 
 
             {new Date().getFullYear()}.
-            <ListItemIcon>
+            <IconButton aria-label="delete" size="large" >
                 <AddIcon />
-            </ListItemIcon>
+            </IconButton>
         </Typography>
     );
 }
@@ -108,8 +111,8 @@ theme = {
                 root: {
                     textTransform: 'none',
                     margin: '0 16px',
-                    minWidth: 0,
-                    padding: 0,
+                    minWidth: 10,
+                    padding: 50,
                     [theme.breakpoints.up('md')]: {
                         padding: 0,
                         minWidth: 0,
@@ -192,16 +195,20 @@ export default function Paperbase() {
         <ThemeProvider theme={theme}>
 
 
-            <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+            <Box sx={{ display: 'flex', minHeight: '60vh' }}>
+
                 <CssBaseline />
 
                 <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+
                      <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
                        <DataCard/>
                      </Box>
+
                     <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
                         <Copyright />
                     </Box>
+
                 </Box>
             </Box>
         </ThemeProvider>

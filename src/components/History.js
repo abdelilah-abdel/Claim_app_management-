@@ -9,7 +9,10 @@ import ClaimsCard from "./claimsCard";
 import Content from "./Content";
 import Navigator from "./Navigator";
 import Paperbase from "./Paperbase";
-
+import ModeNightIcon from "@mui/icons-material/ModeNight";
+import {ToggleButton} from "@mui/material";
+import  DataTable from './DataTable'
+import {Link} from "react-router-dom";
 
 
 function History( ) {
@@ -42,23 +45,19 @@ function History( ) {
 
         <div className="home">
 
-
-
          <Paperbase />
             <Container>
+
                 <Grid container spacing={3}>
-
-
                    <Navigator />
-
                 </Grid>
 
-                
+
+                <ToggleButton value="center" aria-label="centered">
+                    <Link to="/DataTable">Data Base </Link>
+                </ToggleButton>
 
             </Container>
-
-
-
 
 
         </div>

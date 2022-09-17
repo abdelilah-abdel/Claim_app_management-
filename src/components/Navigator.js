@@ -62,11 +62,31 @@ const itemCategory = {
 
 const logo = "https://www.cihbank.ma/sites/all/themes/cih/logo.png"
 
+
+const drawerWidth = 300;
+
 export default function Navigator(props) {
     const { ...other } = props;
 
+    const container = window !== undefined ? () => window().document.body : undefined;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
+
+
     return (
-        <Drawer variant="permanent" {...other}>
+
+        <Drawer
+            variant="permanent"
+            sx={{
+                display: { xs: 'none', sm: 'block' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+            open
+        >
+
+
             <List disablePadding>
                 <ListItem sx={{ ...item, ...itemCategory }}>
                     {/*   <ListItemIcon>
