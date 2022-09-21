@@ -51,7 +51,7 @@ import Paper from "@mui/material/Paper";
                     speed={0.2}
                     factor={5.5}
                     style={{
-                        backgroundImage: `url(${handshake})`,
+                        backgroundImage: `url(${img1})`,
                         backgroundSize: 'cover',
                     }}
 

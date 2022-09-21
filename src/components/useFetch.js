@@ -11,8 +11,8 @@ const useFetch = (url) => {
   const [isPending, setIsPending] = useState(true);
 
     useEffect(()=> {  // whenever the page is rendring something (like when we firt open the page , this funtion works  )
-        console.log('the page updated ( this message was brought to you by useEffect hook'); // connecting with the json server 
-   
+
+      
             fetch(url, { signal: abortCont.signal }) // fetch api 
 
               
@@ -26,14 +26,13 @@ const useFetch = (url) => {
 
               .then((data) => {
                 setIsPending(false);
-           //     console.log(data);
-                setData(data);
+                 setData(data);
                 setError(null);
               })
 
               .catch((err) => {
                 if (err.name ==='AbourtError'){
-                  console.log('fetch aborted')
+
                 }
                 else{
 

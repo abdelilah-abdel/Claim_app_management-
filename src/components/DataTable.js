@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios'
+import API from './API'
+import Piecharts from "./Piecharts";
 
 
 const api = axios.create({
@@ -68,6 +70,11 @@ export default function DenseTable() {
                     ))}
                 </TableBody>
             </Table>
+
+
+            <Piecharts />
+
+
         </TableContainer>
     );
 }
