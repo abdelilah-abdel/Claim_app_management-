@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 
 const useFetch = (url) => {
-  const abortCont = new AbortController();
 
+  const abortCont = new AbortController();
 
   const [data, setData] = useState(null); // {/*usestate hook */}
   const [error, setError] = useState(null);

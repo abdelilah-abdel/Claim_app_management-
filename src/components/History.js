@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import useFetch from "./useFetch";
-import Sidebar from  "./Sidebar"
+import Sidebar from  "./SideNav"
 
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
@@ -45,7 +45,7 @@ function History( ) {
 
         <div className="home">
 
-         <Paperbase />
+             <Paperbase />
             <Container>
 
                 <Grid container spacing={3}>

@@ -1,4 +1,5 @@
 import Home from './components/home';
+import Home2 from './components/Home2';
 import Chatbot from './components/chatbot';
 import CIHform from "./components/CIHform";
 import History from "./components/History";
@@ -36,7 +37,7 @@ import DataTable from  "./components/DataTable"
           <Switch>
 
            <Route exact path="/" element={<Home/>}>
-                <Home />
+                <Home2 />
            </Route>
 
 

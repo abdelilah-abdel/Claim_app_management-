@@ -27,7 +27,7 @@ const categories = [
                 icon: <PeopleIcon />,
                 active: true,
             },
-            { id: 'Database', icon: <DnsRoundedIcon /> },
+            { id: 'Database', icon: <DnsRoundedIcon />   },
             { id: 'Storage', icon: <PermMediaOutlinedIcon /> },
             { id: 'Hosting', icon: <PublicIcon /> },
             { id: 'Functions', icon: <SettingsEthernetIcon /> },
@@ -89,10 +89,13 @@ export default function Navigator(props) {
 
             <List disablePadding>
                 <ListItem sx={{ ...item, ...itemCategory }}>
+
                     {/*   <ListItemIcon>
                            <HomeIcon />
                          </ListItemIcon>
                     */}
+
+
 
                     <img src={logo}/>
                 </ListItem>

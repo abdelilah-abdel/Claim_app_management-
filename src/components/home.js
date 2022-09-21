@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import useFetch from './useFetch'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Home() {
 
@@ -23,14 +25,26 @@ function Home() {
 
 
   return (
-    <div className='Home'>
+    <div >
 
             { error && <div>{ error }</div> }
 
-            <h1 style={{height:"300px", width:"300px",margin:"auto"}} >CIH HOME PAGE </h1>
-
 
             { isPending && <div>Loading...</div> }  {/*  conditional uploading / loading*/}
+
+
+      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div className="col-md-5 p-lg-5 mx-auto my-5">
+          <h1 className="display-4 fw-normal">Punny headline</h1>
+          <p className="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with
+            this example based on Apple’s marketing pages.</p>
+          <a className="btn btn-outline-secondary" href="#">Coming soon</a>
+        </div>
+        <div className="product-device shadow-sm d-none d-md-block"></div>
+        <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+      </div>
+
+
 
 
             
