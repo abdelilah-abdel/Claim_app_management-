@@ -4,12 +4,15 @@ import ReactApexChart from "react-apexcharts";
 import API from "./API";
 import useFetch from "./useFetch";
 
+
+
+
+
+
+
+
+
 const Piecharts = () => {
-  const {
-    error,
-    isPending,
-    data: client,
-  } = useFetch("http://localhost:8000/client");
 
   const api = axios.create({
     baseURL: "http://localhost:8000/client",
@@ -31,9 +34,6 @@ const Piecharts = () => {
         count[element?.state] = 1;
       }
     }
-
-
-
     let res = Object.values(count)
 
     return res;
@@ -69,7 +69,7 @@ const Piecharts = () => {
             options={options}
             series={series}
             type="pie"
-            height={300}
+            height={500}
             width={500}
         />
 

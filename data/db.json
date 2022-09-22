@@ -1,34 +1,6 @@
 {
   "client": [
     {
-      "nom": "abdelil",
-      "prenom": "habb",
-      "email": "aibzijb@gmail.com",
-      "GSM1": "62651651",
-      "GSM2": "64561651",
-      "CIN": "51651",
-      "state": "01",
-      "Typology": "",
-      "Reference": "95195191",
-      "Ncompte": "91919191",
-      "objet": "react-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-dom\n",
-      "id": 1
-    },
-    {
-      "nom": "vffvvvf",
-      "prenom": "habb",
-      "email": "aibzijb@gmail.com",
-      "GSM1": "62651651",
-      "GSM2": "64561651",
-      "CIN": "51651",
-      "state": "01",
-      "Typology": "",
-      "Reference": "95195191",
-      "Ncompte": "91919191",
-      "objet": "react-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-domreact-router-dom\n",
-      "id": 2
-    },
-    {
       "nom": "zez",
       "prenom": "habb",
       "email": "aibzijb@gmail.com",

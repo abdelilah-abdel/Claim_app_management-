@@ -16,7 +16,7 @@ import  traiter from './images/traiter.png'
 import handshake from  './images/handShaking.jpg'
 
 import guichet from './images/guichet.jpg'
-
+import  yellow from './images/yellow.jpg'
 
 
 import { useRef } from 'react';
@@ -51,7 +51,7 @@ import Paper from "@mui/material/Paper";
                     speed={0.2}
                     factor={5.5}
                     style={{
-                        backgroundImage: `url(${img1})`,
+                        backgroundImage: `url(${yellow})`,
                         backgroundSize: 'cover',
                     }}
 
@@ -68,9 +68,8 @@ import Paper from "@mui/material/Paper";
                 style={{ textAlign: 'center' }}
             >
 
+                <h2> call our employees for any claims related to your account , credit card , fraud cases or anything else ..<img className="sticker" src={guy} /> </h2>
 
-                <h2> call our employees for any claims related to your account , credit card , fraud cases or anything else .. </h2>
-                <img className="sticker" src={guy} />
 
             </ParallaxLayer>
 
@@ -84,7 +83,7 @@ import Paper from "@mui/material/Paper";
 
 
             >
-                <h2> our employees will try to treat the claim  at the earliest possible time </h2>
+                <h2> <p>our employees will try to treat the claim  at the earliest possible time </p>  </h2>
                 <img className="sticker" src={traiter} />
 
             </ParallaxLayer>

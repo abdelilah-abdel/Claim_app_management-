@@ -130,7 +130,7 @@ code {
 
 }
 .sticker{
-  width: 30%;
+  width: 10%;
 }
 
 
@@ -164,17 +164,6 @@ body {
 }
 
 
-h2 {
-  text-align: center;
-  font-family: cubano, sans-serif;
-  font-weight: 400;
-  color: white;
-  font-size: 10vw;
-  text-shadow: -0.04em 0.04em 0 #000,
-  0.04em 0.04em 0 #000,
-  0.04em -0.04em 0 #000,
-  -0.04em -0.04em 0 #000;
-}
 
 
 
@@ -223,3 +212,17 @@ h2 {
     opacity: 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

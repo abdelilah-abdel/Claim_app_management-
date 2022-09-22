@@ -9,6 +9,9 @@ import Paper from '@mui/material/Paper';
 import axios from 'axios'
 import API from './API'
 import Piecharts from "./Piecharts";
+import {useEffect, useState} from "react";
+import Box from "@mui/material/Box";
+import {DataGrid} from "@mui/x-data-grid";
 
 
 const api = axios.create({
@@ -21,58 +24,124 @@ const api = axios.create({
 
 
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+
+    const columns = [
+        {
+            field: 'id', headerName: 'ID', width: 90},
+
+        {
+            field: 'nom',
+            headerName: 'nom',
+            width: 150,
+            editable: true,
+        },
+        {
+            field: 'prenom',
+            headerName: 'prenom',
+            width: 150,
+            editable: true,
+        },
+
+        {
+            field: 'CIN',
+            headerName: 'CIN',
+            width: 150,
+            editable: true,
+        },
+        {
+            field: 'email',
+            headerName: 'email',
+            description: 'This column has a value getter and is not sortable.',
+            sortable: false,
+            width: 160,
+            valueGetter: (params) =>
+                `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+        },
+
+        {
+            field: 'Ncompte',
+            headerName: 'Ncompte',
+            type: 'number',
+            width: 110,
+            editable: true,
+        },
+        {
+            field: 'GSM1',
+            headerName: 'GSM',
+            type: 'number',
+            width: 110,
+            editable: true,
+        },
+        {
+            field: 'Reference',
+            headerName: 'Reference',
+            width: 110,
+            editable: true,
+        },
+        {
+            field: 'Typology',
+            headerName: 'Typology',
+            width: 110,
+            editable: true,
+        },
+
+
+        {
+            field: 'state',
+
+            type: 'number',
+            width: 110,
+            editable: true,
+
+        },
+
+
+    ];
+
+
+
+
 
 export default function DenseTable() {
 
-    api.get('/').then(res => console.log(res))
 
 
+    const [dataList, setDataList] = useState([]);
 
+    useEffect(() => {
+        api.get("/").then((res) => setDataList(res.data));
+    }, []);
+
+    const rowsData = () => {
+        let arr = [];
+        for (const element of dataList) {
+            arr.push(element);
+        }
+        let res = Object.values(arr)
+        console.log(res)
+        return res;
+    };
+
+    let series = rowsData();
 
 
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+            <Box sx={{ height: 400, width: '100%' }}>
+                <DataGrid
+                    rows={series}
+                    columns={columns}
+                    pageSize={5}
+                    rowsPerPageOptions={[5]}
+                    checkboxSelection
+                    disableSelectionOnClick
+                    experimentalFeatures={{ newEditingApi: true }}
+                />
+            </Box>
 
+<Piecharts />
 
-            <Piecharts />
 
 
         </TableContainer>
