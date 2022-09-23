@@ -22,7 +22,6 @@ function History( ) {
 
 
 
-
     useEffect(() => {
         fetch('http://localhost:8000/client')
             .then(res => res.json())
@@ -45,11 +44,12 @@ function History( ) {
 
         <div className="home">
 
-             <Paperbase />
+            <Paperbase />
+
             <Container>
 
                 <Grid container spacing={3}>
-                   <Navigator />
+                    <Navigator />
                 </Grid>
 
 

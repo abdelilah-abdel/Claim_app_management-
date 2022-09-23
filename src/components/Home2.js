@@ -17,10 +17,12 @@ import handshake from  './images/handShaking.jpg'
 
 import guichet from './images/guichet.jpg'
 import  yellow from './images/yellow.jpg'
+import pexels from './images/pexels.jpg'
 
 
 import { useRef } from 'react';
 import Paper from "@mui/material/Paper";
+
 
 
  function Home2() {
@@ -51,7 +53,7 @@ import Paper from "@mui/material/Paper";
                     speed={0.2}
                     factor={5.5}
                     style={{
-                        backgroundImage: `url(${yellow})`,
+                        backgroundImage: `url(${pexels})`,
                         backgroundSize: 'cover',
                     }}
 

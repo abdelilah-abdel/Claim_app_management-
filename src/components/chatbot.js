@@ -10,6 +10,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyBpUQ5BXNLKNruq1po6B436M7RAQMkUoRs",
     authDomain: "cihclaims.firebaseapp.com",
@@ -29,7 +30,9 @@ function Chatbot() {
 
 
     return (
+
         <div className="App">
+
             <header>
                 <h1>⚛️🔥💬</h1>
 

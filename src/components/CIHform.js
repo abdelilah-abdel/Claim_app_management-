@@ -6,20 +6,11 @@ import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Grid from '@mui/material/Grid';
-
-
-
 import { useForm } from "react-hook-form";
-
-
- 
 import MenuItem from "@mui/material/MenuItem";
 import { useHistory } from 'react-router-dom';
 import useFetch from "./useFetch";
-
-
 import validator from 'validator';
-
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
@@ -27,21 +18,6 @@ import CardContent from '@material-ui/core/CardContent'
 
 
 
-
-
-
-
-
-
-const TypeIDoptions  = [
-  "CIN",
-  "Passeport",
-  "Acarte de sejour",
-  "Registre de commerce",
-  "Omar Alexander",
-  "Patente",
-  "identifiant fiscal ",
-];
 
 
 function CIHform() {
@@ -84,7 +60,7 @@ function CIHform() {
 
 
     console.log('submited succefully')
-     
+
     e.preventDefault();
     setNomError(false);
     setPrenomError(false);
@@ -101,7 +77,7 @@ function CIHform() {
       setObjetError (true);
     }
 
-     
+
     if (true) {
 
       console.log("fitching if statement is wworking ")
@@ -184,10 +160,9 @@ const handleClose = (event, reason) => {
 
   return (
   <div className="create">
+
     <Card elevation={5} variant="outlined" sx={{ maxWidth: 700 }}>
-        <cardHeader
-            Claims form
-            />
+        <cardHeader Claims form />
 
 
 
@@ -288,6 +263,7 @@ const handleClose = (event, reason) => {
 
 
                 <label> Numero de compte : </label>
+
                 <input
                     value={Ncompte}
                     variant="outlined"
