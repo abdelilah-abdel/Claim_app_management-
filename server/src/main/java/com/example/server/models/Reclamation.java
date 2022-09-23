@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class Reclamation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "nom")
     private String nom;
