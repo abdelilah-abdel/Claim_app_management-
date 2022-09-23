@@ -3,7 +3,6 @@ import Home2 from './components/Home2';
 import Chatbot from './components/chatbot';
 import CIHform from "./components/CIHform";
 import History from "./components/History";
-import  Header from  "./components/Header";
 
 import {BrowserRouter as Router ,Route , Switch } from 'react-router-dom'
 import * as React from "react";
@@ -11,7 +10,8 @@ import Navbar from "./components/navbar";
 import DataTable from  "./components/DataTable"
 
 
- import Paper from "@mui/material/Paper";
+ import AddressForm from "./components/forms/AddressForm";
+import Checkout from "./components/forms/Checkout";
 
 
 
@@ -55,6 +55,10 @@ import DataTable from  "./components/DataTable"
 
               <Route  exact path="/DataTable" component={<DataTable />}>
                   <DataTable />
+              </Route>
+
+              <Route  exact path="/form2" >
+                  <Checkout />
               </Route>
            </Switch>
 

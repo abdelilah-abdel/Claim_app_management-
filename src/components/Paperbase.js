@@ -20,23 +20,7 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import IconButton from "@mui/material/IconButton";
 
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
 
-
-
-            {new Date().getFullYear()}.
-            <IconButton aria-label="delete" size="large" >
-                <AddIcon />
-            </IconButton>
-        </Typography>
-    );
-}
 
 let theme = createTheme({
     palette: {
@@ -205,9 +189,6 @@ export default function Paperbase() {
                        <DataCard/>
                      </Box>
 
-                    <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
-                        <Copyright />
-                    </Box>
 
                 </Box>
             </Box>
