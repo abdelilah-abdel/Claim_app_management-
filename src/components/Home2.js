@@ -24,22 +24,29 @@ import { useRef } from 'react';
 import Paper from "@mui/material/Paper";
 
 
+import {Heading, WorldMap} from 'grommet';
+import SandboxComponent from './SandboxComponent';
+import {Color} from "./Worldmap";
+import {Animated} from "./Diagram";
+import {DoubleFooter} from "./footer";
+
 
  function Home2() {
      const ref = useRef();
     return (
-    <div>
+
         <Parallax pages={5}>
 
             <ParallaxLayer
                 offset={0}
                 speed={2}
-                factor={1.8}
+                factor={1}
                 style={{
                     backgroundImage :`url(${guichet})`,
                     backgroundSize :'cover'
                 }}
             >
+
                 <h1 className="text">CIH plateforme pour vos Reclamations. </h1>
                 <span className="scrollDown"></span>
 
@@ -49,15 +56,17 @@ import Paper from "@mui/material/Paper";
 
 
                 <ParallaxLayer
-                    offset={1}
-                    speed={0.2}
-                    factor={5.5}
+                    offset={0.9}
+                    speed={0.5}
+                    factor={5}
                     style={{
-                        backgroundImage: `url(${pexels})`,
+                        backgroundImage: `url(${img1})`,
                         backgroundSize: 'cover',
                     }}
+                >
+                    <Color />
 
-                ></ParallaxLayer>
+                </ParallaxLayer>
 
 
 
@@ -66,11 +75,10 @@ import Paper from "@mui/material/Paper";
             <ParallaxLayer
                 offset={2}
                 speed={0.5}
-                sticky={{ start: 1.5, end: 1.8 }}
+                sticky={{ start: 1, end: 1.5 }}
                 style={{ textAlign: 'center' }}
             >
-
-                <h2> call our employees for any claims related to your account , credit card , fraud cases or anything else ..<img className="sticker" src={guy} /> </h2>
+                <Animated/>
 
 
             </ParallaxLayer>
@@ -80,7 +88,7 @@ import Paper from "@mui/material/Paper";
             <ParallaxLayer
                 offset={4}
                 speed={0.5}
-                sticky={{ start: 2.5, end: 3 }}
+                sticky={{ start: 2, end: 2.8 }}
                 style={{ textAlign: 'center' }}
 
 
@@ -94,25 +102,28 @@ import Paper from "@mui/material/Paper";
             <ParallaxLayer
                 offset={4}
                 speed={0.5}
-                sticky={{ start: 4, end: 4 }}
+                sticky={{ start: 3, end: 3.8 }}
                 style={{ textAlign: 'center' }}
                 onClick={() => ref.current.scrollTo(0)}
 
             >
                 <h2> get statistic of clients claims, and update the data </h2>
                 <img className="sticker" src={asking} /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <img src={img5}/>
+                <img src={img5}/><br/><br/>
+                <DoubleFooter/>
             </ParallaxLayer>
+
+
 
 
         </Parallax>
 
 
-        <footer>
 
 
-        </footer>
-    </div>
+
+
+
 
     )
 }

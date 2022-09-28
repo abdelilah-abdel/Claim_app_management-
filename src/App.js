@@ -10,7 +10,7 @@ import Navbar from "./components/navbar";
 import DataTable from  "./components/DataTable"
 
 
- import AddressForm from "./components/forms/AddressForm";
+import AddressForm from "./components/forms/AddressForm";
 import Checkout from "./components/forms/Checkout";
 
 

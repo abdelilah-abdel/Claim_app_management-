@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
- import typography  from '@material-ui/core/Typography'
 import {Button, TextField, InputAdornment, Typography} from "@material-ui/core";
-import Home from "./home"
-import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Grid from '@mui/material/Grid';
-import { useForm } from "react-hook-form";
-import MenuItem from "@mui/material/MenuItem";
+ import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+
 import { useHistory } from 'react-router-dom';
 import useFetch from "./useFetch";
 import validator from 'validator';
 import Card from '@material-ui/core/Card'
-import CardHeader from '@material-ui/core/CardHeader'
-import CardContent from '@material-ui/core/CardContent'
+ import CardContent from '@material-ui/core/CardContent'
+import ReCAPTCHA from "react-google-recaptcha";
+import UploadFileIcon from '@mui/icons-material/UploadFile';
+import {DoubleFooter} from "./footer";
 
 
 
@@ -108,20 +104,20 @@ function CIHform() {
 
   Typologie = [
     {
-      label: "Apple",
-      value: "apple",
+      label: "Typologie 1",
+      value: "Typologie 1",
     },
     {
-      label: "Mango",
-      value: "mango",
+      label: "Typologie 2",
+      value: "Typologie 2",
     },
     {
-      label: "Banana",
-      value: "banana",
+      label: "Typologie 3",
+      value: "Typologie 3",
     },
     {
-      label: "Pineapple",
-      value: "pineapple",
+      label: "Typologie 4",
+      value: "Typologie 4",
     },
 
   ]
@@ -157,9 +153,14 @@ const handleClose = (event, reason) => {
         }
     }
 
+    function onChange(value) {
+        console.log("Captcha value:", value);
+    }
 
   return (
+      <div>
   <div className="create">
+
 
     <Card elevation={5} variant="outlined" sx={{ maxWidth: 700 }}>
         <cardHeader Claims form />
@@ -288,10 +289,18 @@ const handleClose = (event, reason) => {
                 />
 
                 <Button component="label">
-                    Telecharger des fichiers
-                    <input hidden accept="image/*" multiple type="file" />
+                    <UploadFileIcon />  Telecharger des fichiers
+                    <input hidden accept="image/*" multiple type="file"  />
                 </Button>
 
+
+
+
+
+                <ReCAPTCHA
+                    sitekey="6Lf8XC8iAAAAAPaHln3yPQqVaNBbqHkeX1Gas1SS"
+                    onChange={handleClick}
+                />
                 <Button
                     variant="contained"
                     type="submit"
@@ -318,6 +327,10 @@ const handleClose = (event, reason) => {
 
 
     </div>
+          <div>
+              <DoubleFooter />
+          </div>
+      </div>
   );
 
 

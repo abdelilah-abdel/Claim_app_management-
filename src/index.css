@@ -74,7 +74,25 @@ code {
 
 
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 13px;
+  color: #b9b9b9;
 
+}
+.customed-checkbox__description {
+  position: relative;
+  padding-left: 25px;
+  font-family: "Lato-Regular";
+  font-size: 13px;
+  line-height: 19px;
+  color: #606779;
+  cursor: pointer;
+}
 
 
 

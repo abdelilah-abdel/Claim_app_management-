@@ -5,10 +5,10 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
 
-
-
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
+import Clock from "./Clock";
+import DataTablegroummet from "./DataTablegroummet";
+import {DoubleFooter} from "./footer";
+import {Everything} from "./EverythingChart";
 
 
 const firebaseConfig = {
@@ -33,11 +33,13 @@ function Chatbot() {
 
         <div className="App">
 
-            <header>
-                <h1>⚛️🔥💬</h1>
+        <Clock />
+            <DataTablegroummet/>
 
-            </header>
 
+            <Everything/>
+
+            <DoubleFooter/>
 
 
         </div>

@@ -32,14 +32,13 @@ const categories = [
             { id: 'Hosting', icon: <PublicIcon /> },
             { id: 'Functions', icon: <SettingsEthernetIcon /> },
             { id: 'Machine learning', icon: <SettingsInputComponentIcon />,},
+            { id: 'Analytics', icon: <SettingsIcon /> },
         ],
     },
     {
         id: 'Quality',
         children: [
-            { id: 'Analytics', icon: <SettingsIcon /> },
-            { id: 'Performance', icon: <TimerIcon /> },
-            { id: 'Test Lab', icon: <PhonelinkSetupIcon /> },
+
         ],
     },
 ];
