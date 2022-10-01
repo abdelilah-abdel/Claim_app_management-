@@ -23,7 +23,7 @@ for (let i = 0; i < 13; i += 1) {
 export const Everything = () => (
     // Uncomment <Grommet> lines when using outside of storybook
     // <Grommet theme={grommet}>
-    <Box align="center" justify="start" pad="xlarge">
+    <Box align="center" justify="start" pad="xxxlarge">
         <DataChart
             data={data}
             series={['date', 'amount', 'need', 'growth']}

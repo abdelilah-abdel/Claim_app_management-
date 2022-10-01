@@ -111,11 +111,11 @@ export default function  DataTablegroummet() {
 
         return (
 
-            <SandboxComponent>
+
                 <Box align='center'>
                     <DataTable resizeable='true' sortable='true' size='small' columns={columns} data={DATA} />
                 </Box>
-            </SandboxComponent>
+
 
 
 

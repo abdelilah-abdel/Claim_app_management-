@@ -233,9 +233,22 @@ body {
 
 
 
+.gradiant{
 
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 
-
+.flexbox-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+}
 
 
 

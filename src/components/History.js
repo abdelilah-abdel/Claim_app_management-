@@ -1,19 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import useFetch from "./useFetch";
-import Sidebar from  "./SideNav"
 
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 
-import ClaimsCard from "./claimsCard";
-import Content from "./Content";
-import Navigator from "./Navigator";
+  import Navigator from "./Navigator";
 import Paperbase from "./Paperbase";
-import ModeNightIcon from "@mui/icons-material/ModeNight";
-import {ToggleButton} from "@mui/material";
-import  DataTable from './DataTable'
-import {Link} from "react-router-dom";
-import {DoubleFooter} from "./footer";
+ import {ToggleButton} from "@mui/material";
+ import {Link} from "react-router-dom";
 
 
 function History( ) {
@@ -49,9 +43,7 @@ function History( ) {
 
             <Container>
 
-                <Grid container spacing={3}>
-                    <Navigator />
-                </Grid>
+
 
 
                 <ToggleButton value="center" aria-label="centered">
@@ -62,6 +54,7 @@ function History( ) {
 
 
         </div>
+
 
 
 </div>

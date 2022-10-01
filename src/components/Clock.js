@@ -5,14 +5,14 @@ import SandboxComponent from './SandboxComponent';
 
 
 export default () => (
-    <SandboxComponent>
-        <Box gap='large'>
-                  <Box round='large' background='dark-3' pad='small'>
+
+        <Box >
+                  <Box round='large' background='dark-4' pad='small'>
                     <Clock type='digital' size='large' run='forward' time='PT20H34M48S' />
 
             </Box>
 
 
         </Box>
-    </SandboxComponent>
+
 );

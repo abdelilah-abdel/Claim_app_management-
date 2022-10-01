@@ -1,20 +1,13 @@
 export const data = [
     {
-        name: 'Las Vegas',
-        carat: '1',
-        color: 'white gold',
-        cut: 'oval',
+        name: 'obtention des réclamations directement auprès du client \n',
+
     },
     {
-        name: 'Tel Aviv',
-        carat: '2',
-        color: 'platinum',
-        cut: 'emerald',
+        name: 'l\'ajout de la réclamation à la base de données \n',
     },
     {
-        name: 'Bangkok',
-        carat: '3',
-        color: 'yellow',
-        cut: 'pear',
+        name: 'Traitement des reclamations \n',
+
     },
 ];

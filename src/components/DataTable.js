@@ -12,7 +12,9 @@ import Piecharts from "./Piecharts";
 import {useEffect, useState} from "react";
 import Box from "@mui/material/Box";
 import {DataGrid} from "@mui/x-data-grid";
+import {GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarExport, GridToolbarDensitySelector,} from '@mui/x-data-grid';
 
+import { useDemoData } from '@mui/x-data-grid-generator';
 
 const api = axios.create({
 
@@ -100,7 +102,16 @@ const api = axios.create({
     ];
 
 
-
+function CustomToolbar() {
+    return (
+        <GridToolbarContainer>
+            <GridToolbarColumnsButton />
+            <GridToolbarFilterButton />
+            <GridToolbarDensitySelector />
+            <GridToolbarExport />
+        </GridToolbarContainer>
+    );
+}
 
 
 export default function DenseTable() {
@@ -137,10 +148,12 @@ export default function DenseTable() {
                     checkboxSelection
                     disableSelectionOnClick
                     experimentalFeatures={{ newEditingApi: true }}
+                    components={{
+                        Toolbar: CustomToolbar,
+                    }}
                 />
             </Box>
 
-<Piecharts />
 
 
 

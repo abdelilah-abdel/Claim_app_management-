@@ -10,6 +10,9 @@ import Card from '@material-ui/core/Card'
 import ReCAPTCHA from "react-google-recaptcha";
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import {DoubleFooter} from "./footer";
+import {Anchor, PageHeader} from "grommet";
+import Checkbox from "@mui/material/Checkbox";
+import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 
 
 
@@ -23,6 +26,8 @@ function CIHform() {
   const handleClick = (e) => {
     console.log("hello", e);
   };
+    const [checked, setChecked] = React.useState(true);
+
 
 
   const history = useHistory();
@@ -74,7 +79,7 @@ function CIHform() {
     }
 
 
-    if (true) {
+    if (checked==true) {
 
       console.log("fitching if statement is wworking ")
       console.log({nom,prenom,email,GSM1})
@@ -128,10 +133,10 @@ function CIHform() {
 
 
 
-
 const  handleChange = (e) => {
     console.log("typologieee ");
     setTypologie(e.target.value);
+    setChecked(e.target.checked);
   }
 
 
@@ -158,9 +163,9 @@ const handleClose = (event, reason) => {
     }
 
   return (
-      <div>
-  <div className="create">
-
+      <div className="gradiant">
+           <div className="create">
+              <h3> Formulaire de réclamation </h3>
 
     <Card elevation={5} variant="outlined" sx={{ maxWidth: 700 }}>
         <cardHeader Claims form />
@@ -169,6 +174,7 @@ const handleClose = (event, reason) => {
 
         <CardContent>
             <form  autoComplete="off" onSubmit={handleSubmit}>
+                <h2> info de client </h2>
                 <label>Nom:</label>
 
                 <input
@@ -180,7 +186,6 @@ const handleClose = (event, reason) => {
                     error={NomError}
                     onChange={(e) => setNom(e.target.value)}
                 />
-
                 <label>prenom:</label>
                 <input
                     value={prenom}
@@ -293,14 +298,22 @@ const handleClose = (event, reason) => {
                     <input hidden accept="image/*" multiple type="file"  />
                 </Button>
 
-
-
-
-
+                <br/><br/><br/>
+                <p>Ce traitement a été notifié et autorisé par la CNDP au titre du récépissé N° D-W-85/2015. Conformément à la loi n° 09-08, vous bénéficiez d’un droit d’accès, de rectification et d’opposition aux traitement de vos données personnelles auprès de la Direction Communication Institutionnelle, Adresse : Quartier Cil, 397-Bd Bd Sidi Abderrahmane, Casablanca 2000 </p>
+<div>
+                <Checkbox
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{ 'aria-label': 'controlled' }}
+                /> <p>J’ai lu et j’accepte les conditions générales d’utilisation, notamment la mention relative à la protection des données personnelles et je consens à recevoir les offres des produits et services du Groupe Banque Populaire.
+                </p>
+</div>
                 <ReCAPTCHA
                     sitekey="6Lf8XC8iAAAAAPaHln3yPQqVaNBbqHkeX1Gas1SS"
                     onChange={handleClick}
                 />
+                <br/><br/><br/>
+
                 <Button
                     variant="contained"
                     type="submit"
@@ -316,7 +329,7 @@ const handleClose = (event, reason) => {
 
                 <br/>
                 <br/>
-                <Button color="error" onClick={handleClick}>
+                <Button color="error" onClick={handleClick} endIcon={<RotateLeftIcon />}>
                     Reset
                 </Button>
             </form>

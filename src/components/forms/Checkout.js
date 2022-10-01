@@ -17,6 +17,7 @@ import AddressForm from "./AddressForm";
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import {DoubleFooter} from "../footer";
 
 
 
@@ -89,7 +90,7 @@ export default function Checkout() {
           sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
         >
           <Typography component="h1" variant="h4" align="center">
-            Reclamation form
+            Demande de renseignement
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
             {steps.map((label) => (
@@ -126,7 +127,7 @@ export default function Checkout() {
                     type="submit"
                     sx={{ mt: 3, ml: 1 }}
                   >
-                    {activeStep === steps.length - 1 ? "Place order" : "Next"}
+                    {activeStep === steps.length - 1 ? "envoyer" : "Next"}
                   </Button>
 
 
@@ -138,7 +139,12 @@ export default function Checkout() {
         </Paper>
 
         <Copyright />
+
+
       </Container>
+        <div>
+      <DoubleFooter/>
+    </div>
     </ThemeProvider>
   );
 }

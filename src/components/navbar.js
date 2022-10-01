@@ -29,8 +29,8 @@ const Navbar = () => {
         <Link to="/">  <img src={logo} ></img> </Link>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/contactus">contacter nous</Link>
-        <Link to="/chatbot"> chatbot </Link>
+        <Link to="/form2">contacter nous</Link>
+        <Link to="/chatbot"> Dashboard </Link>
         <Link to="/form"> form </Link>
         <Link to="/history"> history</Link>
       </div>

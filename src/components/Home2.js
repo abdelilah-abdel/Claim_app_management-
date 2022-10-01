@@ -29,13 +29,14 @@ import SandboxComponent from './SandboxComponent';
 import {Color} from "./Worldmap";
 import {Animated} from "./Diagram";
 import {DoubleFooter} from "./footer";
+import {ControlVariations} from "./GroumetCards";
 
 
  function Home2() {
      const ref = useRef();
     return (
 
-        <Parallax pages={5}>
+        <Parallax pages={4}>
 
             <ParallaxLayer
                 offset={0}
@@ -94,7 +95,7 @@ import {DoubleFooter} from "./footer";
 
             >
                 <h2> <p>our employees will try to treat the claim  at the earliest possible time </p>  </h2>
-                <img className="sticker" src={traiter} />
+                <ControlVariations />
 
             </ParallaxLayer>
 
@@ -102,14 +103,12 @@ import {DoubleFooter} from "./footer";
             <ParallaxLayer
                 offset={4}
                 speed={0.5}
-                sticky={{ start: 3, end: 3.8 }}
+                sticky={{ start: 4, end: 4 }}
                 style={{ textAlign: 'center' }}
                 onClick={() => ref.current.scrollTo(0)}
 
             >
-                <h2> get statistic of clients claims, and update the data </h2>
-                <img className="sticker" src={asking} /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <img src={img5}/><br/><br/>
+                  <img src={img5}/><br/><br/>
                 <DoubleFooter/>
             </ParallaxLayer>
 
